@@ -31,21 +31,3 @@ addClassEven()
 keyPlay()
 
 
-
-/*if (event.code === 'KeyA') {
-        console.log(1)
-      } else if (event.code === 'KeyS') {
-      } else if (event.code === 'KeyD') {
-        console.log(2)
-        console.log(3)
-      }else if (event.code === 'KeyF') {
-        console.log(4)
-      }else if (event.code === 'KeyG') {
-        console.log(5)
-      }else if (event.code === 'KeyH') {
-        console.log(6)
-      }else if (event.code === 'KeyJ') {
-        console.log(7)
-    }else if (event.code === 'KeyK') {
-        console.log(8)
-    }*/
