@@ -80,6 +80,7 @@ body {
 .but-1 {
     border-radius: 21px;
     height: 245px;
+   
 }
 .but-2 {
     border-radius: 21px;
@@ -103,12 +104,28 @@ body {
     border-radius: 21px;
     height: 227px;
 }
-/*--------------------------------------------------------------------------------------*/
+/*---------------------------------------animation-----------------------------------------------*/
+.start {
+    position: relative;
+    animation: vibration-strigs;
+    animation-duration: 2ms;
+    animation-iteration-count: 100;
+    animation-timing-function: cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+@keyframes vibration-strigs {
+    0% {
+        left: 0.5%;
+    }
+    100% {
+        right: 0.5%;
+        border: 2px solid #D4C5C5;
+    }
 
+}
 
 .type {
     color: #ECECEC;
     border: 6px solid #F4E3E3;
-    border-radius: 21pxs;
+    border-radius: 21px;
     width: 33px;
 }
