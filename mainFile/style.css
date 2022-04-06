@@ -1,6 +1,34 @@
+:root {
+    ---color-dek: #F5DD9C;
+    ---color-dek2: rgb(235, 203, 109);
+    ---color-dek-border: #F4F3CF;
+    ---color-strig: #fff;
+}
 html {
     width: 100%;
     height: 100%;
+    ---color-dek: #F5DD9C;
+    ---color-dek2:  rgb(235, 203, 109);
+    ---color-dek-border: #F4F3CF;
+    ---color-strig: #fff;
+
+}
+html.chenge {
+    ---color-dek: #E4B0B0;
+    ---color-dek2: #ffb3b3;
+    ---color-dek-border: #FFFF;
+}
+html.chenge1 {
+    ---color-dek: #4b4141;
+    ---color-dek2: #bdded1;
+    ---color-dek-border: #FFFF;
+    ---color-strig: #ffdada;
+}
+html.chenge2 {
+    ---color-dek: #e0e0e0;
+    ---color-dek2: #a2e7e0;
+    ---color-dek-border: #FFFF;
+    ---color-strig:#e6d2ff;
 }
 body {
     padding: 0;
@@ -13,8 +41,11 @@ body {
 
 .main-blok {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-self: center;
+    align-items: center;
+    gap: 20px;
 }
 
 .frame {
@@ -22,12 +53,13 @@ body {
     flex-direction: column;
     width: 570px;
     height: 685px;
-    background-color: #F5DD9C;
-    border: 9px solid #F4F3CF;
+    background: linear-gradient(var(---color-dek), var(---color-dek2)); 
+    border: 9px solid var(---color-dek-border);
     border-radius: 50px;
     justify-content: space-around;
     position: relative;
     gap: 10px;
+    box-shadow: 2px 2px rgba(229, 201, 201, 0.456);
 }
 
 .rezonate-drop {
@@ -124,8 +156,137 @@ body {
 }
 
 .type {
-    color: #ECECEC;
+    background-color: var(---color-strig);
     border: 6px solid #F4E3E3;
     border-radius: 21px;
     width: 33px;
+    box-shadow: 8px 9px rgba(190, 166, 166, 0.66);
+}
+/*---------------------------------------nota**************************************/
+.name-not {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 33px;
+    position: absolute;
+    left: 14%;
+    top: 5%;
+}
+.but-chenge {
+}
+.change-cord {
+    width: 300px;
+    height: 50px;
+}
+.name-not.gapCord {
+    gap: 45px;
+}
+.change-cord.cheng {
+    background-color: brown;
+
+}
+/****************-------------------------------------------------------------------------------*/
+.hamburger {
+    width: 100px;
+    height: 100px;
+    background-color: #D4C5C5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    z-index: 3;
+
+}
+.line {
+    width: 70px;
+    height: 5px;
+    background-color: rgb(222, 137, 137);
+    transition: all 0.3s ease-in-out;
+}
+.line.play {
+    margin-top: -16px;
+}
+
+.hamburger.play .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.hamburger.play .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+.hamburger.play .line2 {
+    opacity: 0;
+}
+/*------------------------------------------------------------------------------------------------------*/
+.list-menu.open {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    gap: 30px;
+}
+.list-menu {
+    display: none;
+    transition-duration: 1s;
+}
+
+.color {
+    color: #D4C5C5;
+    font-size: 50px;
+    transition-duration: 1s;
+    background-color: var(---bak-color-button-chenge);
+}
+.color:hover {
+    color: aquamarine;
+    font-size: 51px;
+}
+.color.chenge {
+    background-color: #fff;
+}
+.color1 {
+    color: #D4C5C5;
+    font-size: 50px;
+    transition-duration: 1s;
+    background-color: var(---bak-color-button-chenge);
+}
+.color1:hover {
+    color: aquamarine;
+    font-size: 51px;
+}
+.color1.chenge1 {
+    background-color: #fff;
+}
+.color2 {
+    color: #D4C5C5;
+    font-size: 50px;
+    background-color: var(---bak-color-button-chenge);
+    transition-duration: 1s;
+}
+.color2:hover {
+    color: aquamarine;
+    font-size: 51px;
+}
+.color2.chenge2 {
+    background-color: #fff;
+}
+.reset {
+    color: #D4C5C5;
+    font-size: 50px;
+    transition-duration: 1s;
+    background-color: var(---bak-color-button-chenge);
+}
+.reset:hover {
+    color: aquamarine;
+    font-size: 51px;
+}
+.reset.del {
+    background-color: #fff;
 }
