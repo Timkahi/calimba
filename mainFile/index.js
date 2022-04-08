@@ -27,12 +27,12 @@ const color2 = document.querySelector('.color2')
 const reset = document.querySelector('.reset')
 const html = document.querySelector('html')
 
-const addClassEven = () => {
+const addClassEven = (array) => {
     strings.forEach((elem, g) => {
         elem.addEventListener('click', () => {
             elem.classList.add('start')
             console.log(g)
-            aud.src = arrayAudio[g]
+            aud.src = array[g]
             aud.play()
             aud.playbackRate = 6
             setTimeout(() => {
@@ -41,7 +41,7 @@ const addClassEven = () => {
         })
     })
 }
-
+addClassEven(arrayAudio)
 
 const keyPlay = (time, array) => {
     document.addEventListener("keydown", (event) => {
@@ -51,44 +51,44 @@ const keyPlay = (time, array) => {
               setTimeout(() => {
                   strings[nun].classList.remove('start')
               }, 500) 
-              
               if (nun === 0) {
-                  array[0].play()
-                  array[0].currentTime = 0
-                  array[0].playbackRate = time
-              } else if (nun === 1) {
-                  array[1].play()
-                  array[1].playbackRate = time
-                  array[1].currentTime = 0
-              } else if (nun === 2) {
-                  array[2].play()
-                  array[2].playbackRate = time
-                  array[2].currentTime = 0 
-              } else if (nun === 3) {
-                  array[3].play()
-                  array[3].playbackRate = time
-                  array[3].currentTime = 0 
-              } else if (nun === 4) {
-                  array[4].play()
-                  array[4].playbackRate = time
-                  array[4].currentTime = 0 
-              } else if (nun === 5) {
-                  array[5].play()
-                  array[5].playbackRate = time
-                  array[5].currentTime = 0 
-              } else if (nun === 6) {
-                  array[6].play()
-                  array[6].playbackRate = time
-                  array[6].currentTime = 0 
-              } else if (nun === 7) {
-                  array[7].play()
-                  array[7].playbackRate = time
-                  array[7].currentTime = 0 
-              }
+                array[0].play()
+                array[0].currentTime = 0
+                array[0].playbackRate = time
+            } else if (nun === 1) {
+                array[1].play()
+                array[1].playbackRate = time
+                array[1].currentTime = 0
+            } else if (nun === 2) {
+                array[2].play()
+                array[2].playbackRate = time
+                array[2].currentTime = 0 
+            } else if (nun === 3) {
+                array[3].play()
+                array[3].playbackRate = time
+                array[3].currentTime = 0 
+            } else if (nun === 4) {
+                array[4].play()
+                array[4].playbackRate = time
+                array[4].currentTime = 0 
+            } else if (nun === 5) {
+                array[5].play()
+                array[5].playbackRate = time
+                array[5].currentTime = 0 
+            } else if (nun === 6) {
+                array[6].play()
+                array[6].playbackRate = time
+                array[6].currentTime = 0 
+            } else if (nun === 7) {
+                array[7].play()
+                array[7].playbackRate = time
+                array[7].currentTime = 0 
+            }
           }
         }) 
      })
 }
+
 
 button.addEventListener('click', () => {
     if (t === 1) {
@@ -108,11 +108,11 @@ button.addEventListener('click', () => {
     }
 })
 let r =1
-const test = (c=1) => {
+const test = (c=8) => {
     document.addEventListener('keydown', (event) => {
         if (event.code === 'Space') {
             if (r === 1) {
-                keyPlay(1, arrayLet)
+                keyPlay(8, arrayLet)
                 r = 0
                 console.log('up')
             } else {
@@ -178,3 +178,9 @@ reset.addEventListener('click', () => {
 })
 
 test()
+
+
+/* 
+              
+              
+*/
